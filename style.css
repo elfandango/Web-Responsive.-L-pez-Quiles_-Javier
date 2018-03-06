@@ -1,0 +1,639 @@
+/*RESET: Eliminación de los valores por defeto*/
+
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,700|Zilla+Slab:300,300i,400,400i,700,700i&subset=latin-ext");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*----------------------------------PÁGINA INICIAL-------------------------------------------*/
+
+/*La clase container sirve para agrupar los elementos del cuerpo en una columna central con espaciado a los lados*/
+
+.container {
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+/*Para los formatos de pantalla de escritorio,se aplica la clase container*/
+
+@media (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/*Determinamos las características de los títulos del cuerpo*/
+
+body h1 {
+  font-family: "Zilla Slab", serif;
+  color: #17434E;
+}
+
+/*Determinamos las características del texto del cuerpo*/
+
+body p {
+  font-family: "Zilla Slab", serif;
+  color: rgb(66, 66, 66);
+  font-size: 15px;
+  padding-top: 20px;
+}
+
+/*clase para elementos en negrita*/
+
+body p b {
+  font-weight: bold;
+}
+
+/*clase para elementos en itálica*/
+
+body p i {
+  font-style: italic;
+}
+
+form {
+  padding: 10px;
+}
+
+label,
+input,
+button,
+button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*Clase para la etiqueta superior a los campos de texto*/
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*Clase para los campos de texto*/
+
+input,
+button {
+  margin: 5px 0 15px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+/*Cuando el ratón se situa encima la opacidad se restaura al 100%*/
+
+input:hover,
+button:hover {
+  background-color: white;
+}
+
+/*mienstras se introduce texto la opacidad está al 100%*/
+
+input:focus {
+  background-color: white;
+}
+
+/*Clase para el botón*/
+
+button {
+  color: #DBDBDB;
+  background-color: rgba(23, 67, 78, 0.815);
+  margin: 5px 0 15px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  transition: 0.2s;
+  width: 30%;
+  margin-left: 35%
+}
+
+/*Al situar el ratón encima cambia de color*/
+
+button:hover {
+  color: #17434E;
+  background-color: #DBDBDB;
+  border: solid 2px #17434E;
+}
+
+/*Al clicar el botón cabia de color*/
+
+button:active {
+  color: #DBDBDB;
+  border: solid 2px #17434E;
+  background-color: rgba(23, 67, 78, 0.486);
+}
+
+/*Clase para definir la cabecera de la página*/
+
+.web-header {
+  box-sizing: border-box;
+  background-image: url("./img/header.png");
+  background-attachment: fixed;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 30px;
+  box-shadow: 6px 6px 6px rgb(134, 134, 134);
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*El alto del cabecero se reduce en formato móvil*/
+
+@media (max-width: 569px) {
+  .web-header {
+    height: 300px;
+  }
+}
+
+/*Elimina el subrallado del link*/
+
+.web-header a {
+  text-decoration: none;
+}
+
+/*Clase para redimensionar los iconos del header*/
+
+.web-header img {
+  max-width: 80px;
+  transition: 0.2s;
+}
+
+/*Al colocar el cursor sobre ellos augmentan de tamaño*/
+
+.web-header img:hover {
+  transform: scale(1.1);
+}
+
+.web-header span {
+  margin: 0 2% 0 2%;
+}
+
+/*Clase para el formulario de ingreso*/
+
+.sign-in {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/*centrar sign in en formato movil*/
+
+@media (max-width: 569px) {
+  .sign-in {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.sign-in p{
+  font-family: "Zilla Slab", serif;
+  color: white;
+}
+
+.sign-in input{
+  text-align: center;
+  padding: 3px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 5px 20% 0 0;
+  color: rgb(148, 148, 148);
+}
+
+/*Clase para determinar las características del buscador de la cabecera.*/
+
+.buscador {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 30px 20% 20px 20%;
+}
+
+/*El buscador del cabecero se recoloca en formato móvil*/
+
+@media (max-width: 569px) {
+  .buscador {
+    margin: 20px 20% 20px 20%;
+  }
+}
+
+/*clase para situar elementos del header en el centro*/
+
+.centrarperfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.centrarimagenes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+/*características del título del texto*/
+
+.web-title {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  padding: 10px;
+  margin-bottom: 40px;
+  color: white;
+  transition: 0.2s;
+}
+
+/*El título del cabecero se reduce en formato móvil*/
+
+@media (max-width: 569px) {
+  .web-title {
+    font-size: 25px;
+  }
+}
+
+/*Al situar encima el ratón se amplía levemente*/
+
+.web-title:hover {
+  transform: scale(1.1);
+}
+
+/*Todos los ajustes para los carteles de estados: error, cargando, vacío e ideal.*/
+
+.songlist {
+  margin-top: 0px;
+}
+
+.songlist .ui-status {
+  display: none;
+}
+
+.songlist.empty .ui-status.empty {
+  display: block;
+}
+
+.songlist.loading .ui-status.loading {
+  display: block;
+}
+
+.songlist.error .ui-status.error {
+  display: block;
+}
+
+.songlist.ideal .ui-status.ideal {
+  display: block;
+}
+
+.songlist.empty,
+.songlist.error,
+.songlist.loading {
+  font-size: 20px;
+  text-align: center;
+  padding: 50px;
+}
+
+/*Clase para definir cada objeto de la lista*/
+
+.songlist .song {
+  box-sizing: border-box;
+  font: "Zilla Slab", serif;
+  width: 100%;
+  float: left;
+  padding: 15px;
+  margin: 10px 5px;
+  height: 500 px;
+  max-height: 700px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+/*En formato landscape cada elemento ocupa la mitad del ancho asignado*/
+
+@media (min-width: 424px) {
+  .songlist .song {
+    width: calc(50% - 10px);
+  }
+}
+
+/*En formato desktop cada elemento ocupa un tercio del ancho asignado*/
+
+@media (min-width: 1024px) {
+  .songlist .song {
+    width: calc(33.3% - 10px);
+  }
+}
+
+/*Cada elemento se resalta cuando colocamos el ratón encima*/
+
+.songlist .song:hover {
+  box-shadow: 6px 6px 6px rgb(134, 134, 134);
+}
+
+/*COVER=Miniatura de la obra*/
+
+/*Clase para la imagen miniatura de cada elemento de la lista*/
+
+.songlist .cover {
+  width: 100%;
+  transform: scale(0.9, 0.9);
+  transition: 0.2s;
+}
+
+/*cuando se coloca el cursor encima la miniatura se escala levemente*/
+
+.songlist .cover:hover {
+  transform: scale(1, 1);
+}
+
+/*ARTIST= Tñítulo de la obra*/
+
+/*Clase para el título de la obra en cada elemento de la lista*/
+
+.songlist .artist {
+  font-family: "Zilla Slab", serif;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.songlist .title {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Zilla Slab", serif;
+  color: rgb(66, 66, 66);
+}
+
+/*Clases para los letreros de los estados: error y loading*/
+
+.song-form .ui-status.error {
+  text-align: center;
+  background-color: #F8695B;
+  padding: 10px;
+  border-radius: 10px;
+  color: #f8f5ee;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.song-form .ui-status.loading {
+  text-align: center;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.song-form.error .ui-status.error {
+  display: block;
+}
+
+.song-form.error .ui-status.error.loading .ui-status.loading {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .song-form .form-control-group {
+    box-sizing: border-box;
+    width: calc(50% - 4px);
+    display: inline-block;
+    padding: 0 5px;
+  }
+}
+
+/*Clase para el pié de página*/
+
+.web-footer {
+  background-image: url("./img/header.png");
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+/*clase para el texto del pie de página*/
+
+.footer-title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Zilla Slab", serif;
+  padding: 15px;
+  color: #DBDBDB;
+  transition: 0.2s;
+}
+
+/*Cuando se pone el cursor encima se resaltan*/
+
+.footer-title:hover {
+  font-size: 13px;
+}
+
+.footer-title span {
+  text-decoration: none;
+}
+
+/*----------------------------------DETAIL-------------------------------------------*/
+
+/*clase para definir las imágenes del detail*/
+
+.columnaizq img {
+  max-width: 350px;
+  max-height: auto;
+  display: inline !important;
+  object-fit: contain;
+}
+
+/*Esta clase la uso para distinguir los elementos cuando trabajo con flexbox
+La activo solo para trabajar*/
+
+/*
+.fondopruebas{
+  background-color: rgba(12, 255, 30, 0.1);
+  border: solid 1px black;
+}*/
+
+/*clase para situar las imágenes en la columna izquierda*/
+
+/*FLEXBOX: ocupa 1/3 del ancho*/
+
+.columnaizq {
+  max-width: 320px;
+  text-align: center;
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 20%;
+}
+
+/*clase para situar el texto en la columna derecha*/
+
+/*FLEXBOX: ocupa 2/3 del ancho*/
+
+.columnadech {
+  max-width: 320px;
+  text-align: left;
+  padding: 5%;
+  flex-grow: 2;
+  flex-basis: 20%;
+  text-align: left;
+}
+
+/*clase de ajustes flex que afecta a ambas columnas y ayuda a situarlas*/
+
+.detalleflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*clase para diferenciar el título del detalle*/
+
+.titulodetalle {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+/*clase para el precio del producto*/
+
+.precio {
+  font-size: 150%;
+  font-weight: bold;
+  margin: 14px 0 14px 0;
+}
